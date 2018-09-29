@@ -38,7 +38,9 @@ function _init() {
 		let loader = new AssetsLoader({
 			assets:assets
 		}).on('error', function (error) {
+			alert(error)
 			console.error(error);
+
 		}).on('progress', function (p) {
 			// console.log('Progress : ', p);
 			let loader = document.body.querySelector('.Loading-Bar');
