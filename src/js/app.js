@@ -1,74 +1,95 @@
 import '../scss/global.scss';
-import '../scss/about.scss';
-import '../scss/experiment.scss';
+import alfrid, { GL } from 'alfrid';
+import SceneApp from './SceneApp';
+import AssetsLoader from 'assets-loader';
+import dat from 'dat-gui';
+import Stats from 'stats.js';
+import assets from './asset-list';
+import Assets from './Assets';
 
-import React from 'react';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { Router, Route, IndexRoute, hashHistory, browserHistory, Redirect } from 'react-router';
-import { syncHistoryWithStore, routerReducer, routerMiddleware } from 'react-router-redux'
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+window.params = {
+	numParticles:64 * 1,
+	skipCount: 4,
+	maxRadius: 5.5,
+	sphereSize: 3,
+	numSeg:40,
+	light: {
+		lightPos:[0, 0, 1]
+	},
+	lineLife: {
+		uEnd:150,
+		uLength:40
+	}
+};
 
-
-import ExpModel from './ExpModel';
-import App from './pages/App';
-import Home from './pages/Home';
-import About from './pages/About';
-import Experiment from './pages/Experiment';
-
-
-ExpModel.reverse();
-
-// console.log('Folder Static pages testing ', Math.floor(Math.random() * 100));
-// console.log('Sketches : ', ExpModel);
-//	CONSTRUCT MODELS
-
-const experimentsReducer = (state=ExpModel, action) => {
-	return state;
-}
-
-const middleware = routerMiddleware(browserHistory)
-
-
-/*/
-window.baseUrl = '/';
-/*/
-window.baseUrl = "/Sketches/";
-//*/
-
-// console.log('Location : ', window.location.href);
-const protocol = window.location.href.split('://')[0];
-if(window.location.href.indexOf('localhost') > -1) {
-	window.baseUrl = '/';
-	ExpModel.map((exp) => {
-		exp.cover = `${protocol}://yiwenl.github.io/Sketches/${exp.cover}`;
-	});
+if(document.body) {
+	_init();
 } else {
-	ExpModel.map((exp) => {
-		exp.cover = `${protocol}://yiwenl.github.io/Sketches/${exp.cover}`;
-	});
+	window.addEventListener('DOMContentLoaded', _init);	
 }
 
-//	MAKE SOME REDUCERS
-let reducer = combineReducers({
-	experiments: experimentsReducer,
-	routing: routerReducer
-})
 
-const store = createStore(reducer, applyMiddleware(middleware));
-const history = syncHistoryWithStore(browserHistory, store);
+function _init() {
 
-window.addEventListener('DOMContentLoaded', () => {
-	render(
-		<Provider store={store}>
-			<Router history={browserHistory}>
-				<Route path={baseUrl} component={App}>
-					<Route path={baseUrl + 'exps/:exp'} component={Experiment} />
-					<Route path={baseUrl + 'about'} component={About} />
-				</Route>
-			</Router>
-		</Provider>
-		,document.querySelector('#root')
-	);	
-});
+	//	LOADING ASSETS
+	if(assets.length > 0) {
+		document.body.classList.add('isLoading');
 
+		let loader = new AssetsLoader({
+			assets:assets
+		}).on('error', function (error) {
+			console.error(error);
+		}).on('progress', function (p) {
+			// console.log('Progress : ', p);
+			let loader = document.body.querySelector('.Loading-Bar');
+			if(loader) loader.style.width = (p * 100).toFixed(2) + '%';
+		}).on('complete', _onImageLoaded)
+		.start();	
+	} else {
+		_init3D();
+	}
+
+}
+
+
+function _onImageLoaded(o) {
+	//	ASSETS
+	console.log('Image Loaded : ', o);
+	window.assets = o;
+	const loader = document.body.querySelector('.Loading-Bar');
+	loader.style.width = '100%';
+
+	_init3D();
+
+	setTimeout(()=> {
+		document.body.classList.remove('isLoading');
+	}, 250);
+}
+
+
+function _init3D() {
+	
+	//	CREATE CANVAS
+	const canvas = document.createElement('canvas');
+	canvas.className = 'Main-Canvas';
+	document.body.appendChild(canvas);
+
+	//	INIT 3D TOOL
+	GL.init(canvas, {ignoreWebgl2:true});
+
+	//	INIT ASSETS
+	Assets.init();
+
+	//	INIT DAT-GUI
+	// window.gui = new dat.GUI({ width:300 });
+	// gui.add(params, 'maxRadius', 0.0, 10.0);
+
+	//	CREATE SCENE
+	const scene = new SceneApp();
+
+	//	STATS
+	// const stats = new Stats();
+	// document.body.appendChild(stats.domElement);
+	// alfrid.Scheduler.addEF(()=>stats.update());
+
+}
