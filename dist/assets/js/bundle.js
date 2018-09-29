@@ -3176,7 +3176,22 @@
 
 	function _init() {
 
-		_init3D();
+		//	LOADING ASSETS
+		if (_assetList2.default.length > 0) {
+			document.body.classList.add('isLoading');
+
+			var loader = new _assetsLoader2.default({
+				assets: _assetList2.default
+			}).on('error', function (error) {
+				console.error(error);
+			}).on('progress', function (p) {
+				// console.log('Progress : ', p);
+				var loader = document.body.querySelector('.Loading-Bar');
+				if (loader) loader.style.width = (p * 100).toFixed(2) + '%';
+			}).on('complete', _onImageLoaded).start();
+		} else {
+			_init3D();
+		}
 	}
 
 	function _onImageLoaded(o) {
