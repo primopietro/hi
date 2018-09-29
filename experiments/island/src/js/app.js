@@ -10,15 +10,15 @@ import Assets from './Assets';
 window.params = {
 	numParticles:64 * 1,
 	skipCount: 4,
-	maxRadius: 2.5,
-	sphereSize: 2,
+	maxRadius: 5.5,
+	sphereSize: 3,
 	numSeg:40,
 	light: {
 		lightPos:[0, 0, 1]
 	},
 	lineLife: {
-		uEnd:100,
-		uLength:30
+		uEnd:150,
+		uLength:40
 	}
 };
 

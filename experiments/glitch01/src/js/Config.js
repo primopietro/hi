@@ -1,4 +1,0 @@
-// Config.js
-
-export default {
-};

@@ -1,17 +1,20 @@
 {
-  "name": "sketch_site",
+  "name": "hi",
   "version": "1.0.0",
-  "description": "sketch_site",
+  "description": "hi",
   "scripts": {
     "test": "node test.js",
     "createSketch": "node createSketch.js",
     "start": "webpack-dev-server",
-    "dev": "NODE_ENV=development webpack-dev-server --hot --inline --host 0.0.0.0 --colors --error-details --content-base ",
-    "build": "NODE_ENV=production webpack --progress --colors --error-details && node createSketch.js"
+    "dev": "webpack-dev-server --hot --inline --host 0.0.0.0 --colors --error-details --content-base ",
+    "build": "webpack --progress --colors --error-details && node createSketch.js",
+    "build2": "react-scripts build"
   },
   "repository": {},
-  "keywords": [],
-  "author": "Yi-Wen Lin",
+  "keywords": [
+    "xD"
+  ],
+  "author": "Pietro Primo",
   "license": "ISC",
   "devDependencies": {
     "alfrid": "^0.1.0",
@@ -50,5 +53,8 @@
     "style-loader": "^0.13.0",
     "webpack": "1.12.14",
     "webpack-dev-server": "1.14.1"
+  },
+  "dependencies": {
+    "react-scripts": "^1.1.5"
   }
 }
