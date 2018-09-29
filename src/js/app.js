@@ -40,14 +40,16 @@ function _init() {
 			console.error(error);
 		}).on('progress', function (p) {
 			// console.log('Progress : ', p);
-			//let loader = document.body.querySelector('.Loading-Bar');
-			//if(loader) loader.style.width = (p * 100).toFixed(2) + '%';
+			let loader = document.body.querySelector('.Loading-Bar');
+			if(loader) loader.style.width = (p * 100).toFixed(2) + '%';
 		}).on('complete', _onImageLoaded)
 		.start();	
 	} else {
 		_init3D();
 	}
 
+	_init3D();
+	document.body.classList.remove('isLoading');
 }
 
 
