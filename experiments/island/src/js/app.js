@@ -30,27 +30,7 @@ if(document.body) {
 
 
 function _init() {
-
-	//	LOADING ASSETS
-	if(assets.length > 0) {
-		document.body.classList.add('isLoading');
-
-		let loader = new AssetsLoader({
-			assets:assets
-		}).on('error', function (error) {
-			alert(error)
-			console.error(error);
-
-		}).on('progress', function (p) {
-			// console.log('Progress : ', p);
-			let loader = document.body.querySelector('.Loading-Bar');
-			if(loader) loader.style.width = (p * 100).toFixed(2) + '%';
-		}).on('complete', _onImageLoaded)
-		.start();	
-	} else {
-		_init3D();
-	}
-
+	_init3D();
 }
 
 
