@@ -722,7 +722,7 @@
 
 	'use strict';
 
-	var EventEmitter = __webpack_require__(115).EventEmitter;
+	var EventEmitter = __webpack_require__(113).EventEmitter;
 
 	function Emitter() {
 	    EventEmitter.call(this);
@@ -2281,11 +2281,11 @@
 
 	var _Assets2 = _interopRequireDefault(_Assets);
 
-	var _ball = __webpack_require__(117);
+	var _ball = __webpack_require__(115);
 
 	var _ball2 = _interopRequireDefault(_ball);
 
-	var _ball3 = __webpack_require__(116);
+	var _ball3 = __webpack_require__(114);
 
 	var _ball4 = _interopRequireDefault(_ball3);
 
@@ -2377,7 +2377,7 @@
 
 	var _Assets2 = _interopRequireDefault(_Assets);
 
-	var _bg = __webpack_require__(118);
+	var _bg = __webpack_require__(116);
 
 	var _bg2 = _interopRequireDefault(_bg);
 
@@ -2447,7 +2447,7 @@
 
 	var _alfrid2 = _interopRequireDefault(_alfrid);
 
-	var _fxaa = __webpack_require__(119);
+	var _fxaa = __webpack_require__(117);
 
 	var _fxaa2 = _interopRequireDefault(_fxaa);
 
@@ -2519,11 +2519,11 @@
 
 	var _alfrid2 = _interopRequireDefault(_alfrid);
 
-	var _lines = __webpack_require__(121);
+	var _lines = __webpack_require__(119);
 
 	var _lines2 = _interopRequireDefault(_lines);
 
-	var _lines3 = __webpack_require__(120);
+	var _lines3 = __webpack_require__(118);
 
 	var _lines4 = _interopRequireDefault(_lines3);
 
@@ -2630,11 +2630,11 @@
 
 	var _Assets2 = _interopRequireDefault(_Assets);
 
-	var _noise = __webpack_require__(123);
+	var _noise = __webpack_require__(121);
 
 	var _noise2 = _interopRequireDefault(_noise);
 
-	var _noise3 = __webpack_require__(122);
+	var _noise3 = __webpack_require__(120);
 
 	var _noise4 = _interopRequireDefault(_noise3);
 
@@ -2742,7 +2742,7 @@
 
 	var _alfrid2 = _interopRequireDefault(_alfrid);
 
-	var _post = __webpack_require__(124);
+	var _post = __webpack_require__(122);
 
 	var _post2 = _interopRequireDefault(_post);
 
@@ -2832,9 +2832,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var vsRender = __webpack_require__(126); // ViewRender.js
+	var vsRender = __webpack_require__(124); // ViewRender.js
 
-	var fsRender = __webpack_require__(125);
+	var fsRender = __webpack_require__(123);
 	var GL = _alfrid2.default.GL;
 
 	var ViewRender = function (_alfrid$View) {
@@ -2939,9 +2939,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var vsSave = __webpack_require__(128); // ViewSave.js
+	var vsSave = __webpack_require__(126); // ViewSave.js
 
-	var fsSave = __webpack_require__(127);
+	var fsSave = __webpack_require__(125);
 	var GL = _alfrid2.default.GL;
 	var random = function random(min, max) {
 		return min + Math.random() * (max - min);
@@ -3066,7 +3066,7 @@
 
 	var GL = _alfrid2.default.GL; // ViewSim.js
 
-	var fsSim = __webpack_require__(129);
+	var fsSim = __webpack_require__(127);
 
 	var ViewSim = function (_alfrid$View) {
 		(0, _inherits3.default)(ViewSim, _alfrid$View);
@@ -3123,8 +3123,6 @@
 
 	'use strict';
 
-	__webpack_require__(132);
-
 	var _alfrid = __webpack_require__(1);
 
 	var _alfrid2 = _interopRequireDefault(_alfrid);
@@ -3137,11 +3135,11 @@
 
 	var _assetsLoader2 = _interopRequireDefault(_assetsLoader);
 
-	var _datGui = __webpack_require__(112);
+	var _datGui = __webpack_require__(110);
 
 	var _datGui2 = _interopRequireDefault(_datGui);
 
-	var _stats = __webpack_require__(130);
+	var _stats = __webpack_require__(128);
 
 	var _stats2 = _interopRequireDefault(_stats);
 
@@ -3180,7 +3178,7 @@
 
 		//	LOADING ASSETS
 		if (_assetList2.default.length > 0) {
-			document.body.classList.add('isLoading');
+			//document.body.classList.add('isLoading');
 
 			var loader = new _assetsLoader2.default({
 				assets: _assetList2.default
@@ -3194,6 +3192,9 @@
 		} else {
 			_init3D();
 		}
+
+		_init3D();
+		document.body.classList.remove('isLoading');
 	}
 
 	function _onImageLoaded(o) {
@@ -4042,81 +4043,11 @@
 /* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(111)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n  position: static;\n  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6d6d6d+0,000000+100 */\n  background: #333333;\n  /* Old browsers */\n  /* FF3.6-15 */\n  /* Chrome10-25,Safari5.1-6 */\n  background: radial-gradient(ellipse at center, #333333 0%, #000000 100%);\n  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }\n\nhtml {\n  -webkit-text-size-adjust: none;\n  -ms-text-size-adjust: none;\n      text-size-adjust: none; }\n\nh1, h2, h3, h4, text, p {\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-webkit-font-smoothing: antialiased;\n  font-family: 'Open Sans', sans-serif;\n  pointer-events: none; }\n\n.Main-Canvas {\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n  position: absolute;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  opacity: 1;\n  transition: opacity .5s ease-out .25s; }\n  .isLoading .Main-Canvas {\n    opacity: 0; }\n\n.desc {\n  position: fixed;\n  z-index: 9999;\n  bottom: 30px;\n  width: 100%;\n  color: black;\n  text-align: center;\n  letter-spacing: 3px;\n  font-size: 12px;\n  opacity: 1;\n  transition: opacity 1s ease-out 1s; }\n  .isLoading .desc {\n    transition: opacity .0s ease-out;\n    opacity: 0; }\n  .interacted .desc {\n    transition: opacity .5s ease-out;\n    opacity: 0; }\n\n.Message {\n  position: absolute;\n  z-index: 999;\n  width: 100%;\n  top: calc(50% - 50px);\n  text-align: center;\n  letter-spacing: 11px;\n  color: white;\n  opacity: 0;\n  transition: opacity .5s ease-out, letter-spacing .5s ease-out; }\n  .isLoading .Message {\n    letter-spacing: 10px;\n    opacity: 1; }\n\n.Loading-Bar {\n  position: absolute;\n  z-index: 998;\n  width: 0%;\n  height: 1px;\n  top: 50%;\n  background: rgba(255, 255, 255, 0.5);\n  opacity: 0;\n  transition: width .5s ease-out, opacity .5s ease-out; }\n  .isLoading .Loading-Bar {\n    opacity: 1; }\n", ""]);
-
-	// exports
-
+	module.exports = __webpack_require__(112)
+	module.exports.color = __webpack_require__(111)
 
 /***/ },
 /* 111 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 112 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(114)
-	module.exports.color = __webpack_require__(113)
-
-/***/ },
-/* 113 */
 /***/ function(module, exports) {
 
 	/**
@@ -4876,7 +4807,7 @@
 	dat.utils.common);
 
 /***/ },
-/* 114 */
+/* 112 */
 /***/ function(module, exports) {
 
 	/**
@@ -8541,7 +8472,7 @@
 	dat.utils.common);
 
 /***/ },
-/* 115 */
+/* 113 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -8849,91 +8780,91 @@
 
 
 /***/ },
-/* 116 */
+/* 114 */
 /***/ function(module, exports) {
 
 	module.exports = "// copy.frag\n\n#define SHADER_NAME SIMPLE_TEXTURE\n\nprecision highp float;\n#define GLSLIFY 1\nvarying vec2 vTextureCoord;\nvarying vec3 vNormal;\nuniform sampler2D texture;\nuniform vec3 lightPos;\nuniform mat3 uModelViewMatrixInverse;\n\nconst vec3 baseColor = vec3(.1);\n\n\nfloat diffuse(vec3 N, vec3 L) {\n\treturn max(dot(N, normalize(L)), 0.0);\n}\n\n\nvec3 diffuse(vec3 N, vec3 L, vec3 C) {\n\treturn diffuse(N, L) * C;\n}\n\n\nvoid main(void) {\n\tvec3 colorPaper = texture2D(texture, vTextureCoord).rgb;\n\tvec3 color = colorPaper * baseColor;\n\tvec3 L = uModelViewMatrixInverse * lightPos;\n\tfloat _diff = 1.0 - diffuse(vNormal, L);\n\n\tcolor.rgb *= 1.0 + _diff * 5.0;\n\n    gl_FragColor = vec4(color, 1.0);\n}"
 
 /***/ },
-/* 117 */
+/* 115 */
 /***/ function(module, exports) {
 
 	module.exports = "// basic.vert\n\nprecision highp float;\n#define GLSLIFY 1\nattribute vec3 aVertexPosition;\nattribute vec2 aTextureCoord;\nattribute vec3 aNormal;\n\nuniform mat4 uModelMatrix;\nuniform mat4 uViewMatrix;\nuniform mat4 uProjectionMatrix;\nuniform float uLineWidth;\n\nvarying vec2 vTextureCoord;\nvarying vec3 vNormal;\n\nvoid main(void) {\n\tvec3 position = aVertexPosition * uLineWidth;\n    gl_Position = uProjectionMatrix * uViewMatrix * uModelMatrix * vec4(position, 1.0);\n    vTextureCoord = aTextureCoord;\n    vNormal = aNormal;\n}"
 
 /***/ },
-/* 118 */
+/* 116 */
 /***/ function(module, exports) {
 
 	module.exports = "// copy.frag\n\n#define SHADER_NAME SIMPLE_TEXTURE\n\nprecision highp float;\n#define GLSLIFY 1\nvarying vec2 vTextureCoord;\nuniform sampler2D texture;\nuniform float uRatio;\n\n\nfloat contrast(float mValue, float mScale, float mMidPoint) {\n\treturn clamp( (mValue - mMidPoint) * mScale + mMidPoint, 0.0, 1.0);\n}\n\nfloat contrast(float mValue, float mScale) {\n\treturn contrast(mValue,  mScale, .5);\n}\n\nvec2 contrast(vec2 mValue, float mScale, float mMidPoint) {\n\treturn vec2( contrast(mValue.r, mScale, mMidPoint), contrast(mValue.g, mScale, mMidPoint));\n}\n\nvec2 contrast(vec2 mValue, float mScale) {\n\treturn contrast(mValue, mScale, .5);\n}\n\nvoid main(void) {\n\tvec2 uv = vTextureCoord;\n\tuv.x = contrast(uv.x, uRatio * 0.5);\n\t// uv.y = contrast(uv.y, 1.0/uRatio);\n\n    gl_FragColor = texture2D(texture, uv);\n}"
 
 /***/ },
-/* 119 */
+/* 117 */
 /***/ function(module, exports) {
 
 	module.exports = "// copy.frag\n\n#define SHADER_NAME SIMPLE_TEXTURE\n\nprecision highp float;\n#define GLSLIFY 1\nvarying vec2 vTextureCoord;\nuniform sampler2D texture;\nuniform float rtWidth;\nuniform float rtHeight;\n\n\nfloat FXAA_SUBPIX_SHIFT = 1.0/4.0;\n#define FXAA_REDUCE_MIN   (1.0/ 128.0)\n#define FXAA_REDUCE_MUL   (1.0 / 8.0)\n#define FXAA_SPAN_MAX     8.0\n\n\n\nvec4 applyFXAA(vec2 fragCoord, sampler2D tex) {\n    vec4 color;\n    vec2 inverseVP = vec2(1.0 / rtWidth, 1.0 / rtHeight);\n    vec3 rgbNW = texture2D(tex, (fragCoord + vec2(-1.0, -1.0)) * inverseVP).xyz;\n    vec3 rgbNE = texture2D(tex, (fragCoord + vec2(1.0, -1.0)) * inverseVP).xyz;\n    vec3 rgbSW = texture2D(tex, (fragCoord + vec2(-1.0, 1.0)) * inverseVP).xyz;\n    vec3 rgbSE = texture2D(tex, (fragCoord + vec2(1.0, 1.0)) * inverseVP).xyz;\n    vec3 rgbM  = texture2D(tex, fragCoord  * inverseVP).xyz;\n    vec3 luma = vec3(0.299, 0.587, 0.114);\n    float lumaNW = dot(rgbNW, luma);\n    float lumaNE = dot(rgbNE, luma);\n    float lumaSW = dot(rgbSW, luma);\n    float lumaSE = dot(rgbSE, luma);\n    float lumaM  = dot(rgbM,  luma);\n    float lumaMin = min(lumaM, min(min(lumaNW, lumaNE), min(lumaSW, lumaSE)));\n    float lumaMax = max(lumaM, max(max(lumaNW, lumaNE), max(lumaSW, lumaSE)));\n\n    //return texture2D(tex, fragCoord);\n    //return vec4(fragCoord, 0.0, 1.0);\n    //return vec4(rgbM, 1.0);\n\n    vec2 dir;\n    dir.x = -((lumaNW + lumaNE) - (lumaSW + lumaSE));\n    dir.y =  ((lumaNW + lumaSW) - (lumaNE + lumaSE));\n\n    float dirReduce = max((lumaNW + lumaNE + lumaSW + lumaSE) *\n                          (0.25 * FXAA_REDUCE_MUL), FXAA_REDUCE_MIN);\n\n    float rcpDirMin = 1.0 / (min(abs(dir.x), abs(dir.y)) + dirReduce);\n    dir = min(vec2(FXAA_SPAN_MAX, FXAA_SPAN_MAX),\n              max(vec2(-FXAA_SPAN_MAX, -FXAA_SPAN_MAX),\n              dir * rcpDirMin)) * inverseVP;\n\n    vec3 rgbA = 0.5 * (\n        texture2D(tex, fragCoord * inverseVP + dir * (1.0 / 3.0 - 0.5)).xyz +\n        texture2D(tex, fragCoord * inverseVP + dir * (2.0 / 3.0 - 0.5)).xyz);\n    vec3 rgbB = rgbA * 0.5 + 0.25 * (\n        texture2D(tex, fragCoord * inverseVP + dir * -0.5).xyz +\n        texture2D(tex, fragCoord * inverseVP + dir * 0.5).xyz);\n\n    float lumaB = dot(rgbB, luma);\n    if ((lumaB < lumaMin) || (lumaB > lumaMax))\n        color = vec4(rgbA, 1.0);\n    else\n        color = vec4(rgbB, 1.0);\n    return color;\n}\n\nvoid main(void) {\n    vec4 posPos = vec4(.0);\n\n\tvec2 rcpFrame = vec2(1.0/rtWidth, 1.0/rtHeight);\n\n \tposPos.xy = vTextureCoord.xy;\n \tposPos.zw = vTextureCoord.xy - (rcpFrame * (0.5 + FXAA_SUBPIX_SHIFT));\n\n \t// vec4 color = applyFXAA(posPos.xy * vec2(rtWidth, rtHeight), texture);\n \tvec4 color = applyFXAA(vTextureCoord * vec2(rtWidth, rtHeight), texture);\n \tgl_FragColor = color;\n}"
 
 /***/ },
-/* 120 */
+/* 118 */
 /***/ function(module, exports) {
 
 	module.exports = "// copy.frag\n\n#define SHADER_NAME SIMPLE_TEXTURE\n\nprecision highp float;\n#define GLSLIFY 1\nvarying vec2 vTextureCoord;\nvarying float vAlpha;\nuniform sampler2D texture;\n\nuniform vec3 color;\nuniform float opacity;\n\nvoid main(void) {\n\tif(vAlpha <= 0.0) discard;\n    gl_FragColor = vec4(color, opacity * vAlpha);\n}"
 
 /***/ },
-/* 121 */
+/* 119 */
 /***/ function(module, exports) {
 
 	module.exports = "// basic.vert\n\nprecision highp float;\n#define GLSLIFY 1\nattribute vec3 aVertexPosition;\nattribute vec3 aNormal;\n\nuniform mat4 uModelMatrix;\nuniform mat4 uViewMatrix;\nuniform mat4 uProjectionMatrix;\n\nuniform sampler2D textureCurr;\nuniform sampler2D textureNext;\nuniform sampler2D textureExtra;\nuniform float uNumSeg;\nuniform float uEnd;\nuniform float uLength;\n\nvarying vec2 vTextureCoord;\nvarying vec3 vNormal;\nvarying float vAlpha;\n\nvoid main(void) {\n\n\tvec2 uv      = aVertexPosition.xy;\n\tvec3 posCurr = texture2D(textureCurr, uv).rgb;\n\tvec3 posNext = texture2D(textureNext, uv).rgb;\n\tvec3 extra = texture2D(textureExtra, uv).rgb;\n\n\tfloat a \t = 1.0;\n\tif(extra.b > uEnd + uLength) {\n\t\ta = 0.0;\n\t} else if(extra.b > uEnd ) {\n\t\ta = smoothstep(uEnd + uLength, uEnd, extra.b);\n\t}\n\n\n\tconst float lr = 20.0;\n\n\tif(extra.b < uNumSeg) {\n\t\ta = 0.0;\n\t} else if(extra.b < uNumSeg + lr) {\n\t\ta = smoothstep(uNumSeg, uNumSeg + lr, extra.b);\n\t}\n\n\tfloat dCurr = length(posCurr);\n\tfloat dNext = length(posNext);\n\n\ta = pow(a, 3.0);\n\n\tvAlpha = a;\n\n\tvec3 position = mix(posCurr, posNext, aVertexPosition.z);\n\n    gl_Position = uProjectionMatrix * uViewMatrix * uModelMatrix * vec4(position, 1.0);\n    vNormal = aNormal;\n}"
 
 /***/ },
-/* 122 */
+/* 120 */
 /***/ function(module, exports) {
 
 	module.exports = "// copy.frag\n\n#define SHADER_NAME SIMPLE_TEXTURE\n\nprecision highp float;\n#define GLSLIFY 1\nvarying vec3 vExtra;\nvarying float vAlpha;\nuniform sampler2D texture;\nuniform float time;\n\nvec2 rotate(vec2 v, float a) {\n\tfloat s = sin(a);\n\tfloat c = cos(a);\n\tmat2 m = mat2(c, -s, s, c);\n\treturn m * v;\n}\n\nvoid main(void) {\n\n\tvec2 uv = gl_PointCoord - vec2(.5);\n\tuv = rotate(uv, vExtra.r + time);\n\tuv += vec2(.5);\n\n    vec4 color = texture2D(texture, uv);\n\n    color.a *= 0.5 * vAlpha;\n\n    if(color.a <= 0.05) discard;\n\n    gl_FragColor = color;\n}"
 
 /***/ },
-/* 123 */
+/* 121 */
 /***/ function(module, exports) {
 
 	module.exports = "// basic.vert\n\nprecision highp float;\n#define GLSLIFY 1\nattribute vec3 aVertexPosition;\nattribute vec3 aExtra;\nattribute vec3 aNormal;\n\nuniform mat4 uModelMatrix;\nuniform mat4 uViewMatrix;\nuniform mat4 uProjectionMatrix;\nuniform float time;\n\nvarying vec2 vTextureCoord;\nvarying vec3 vNormal;\nvarying vec3 vExtra;\nvarying float vAlpha;\n\nconst float PI = 3.141592653;\n\nvoid main(void) {\n\tvec3 dir = normalize(aVertexPosition);\n\tfloat d = time * (1.0+aExtra.b);\n\tconst float range = 1.0;\n\td = mod(d, range);\n\n\t// vAlpha = smoothstep(range, 0.0, d);\n\tvAlpha = sin(PI * d/range);\n\n\tvec3 position = aVertexPosition + dir * d;\n    gl_Position = uProjectionMatrix * uViewMatrix * uModelMatrix * vec4(position, 1.0);\n    vNormal = aNormal;\n\n    gl_PointSize = aExtra.r * 40.0 + 50.0;\n    vExtra = aExtra;\n}"
 
 /***/ },
-/* 124 */
+/* 122 */
 /***/ function(module, exports) {
 
 	module.exports = "// copy.frag\n\n#define SHADER_NAME SIMPLE_TEXTURE\n\nprecision highp float;\n#define GLSLIFY 1\nvarying vec2 vTextureCoord;\nuniform sampler2D texture;\nuniform sampler2D textureMap;\n\nconst vec3 color0 = vec3(19.0, 18.0, 11.0)/255.0;\nconst vec3 color1 = vec3(239.0, 240.0, 235.0)/255.0;\nuniform float offset;\n\nvoid main(void) {\n\tvec4 color = texture2D(texture, vTextureCoord);\n\tvec3 colorMap = texture2D(textureMap, vTextureCoord).rgb;\n\n\t// color.r += colorMap.r;\n\n\t// if(colorMap.r > .5 && color.r >= 0.9) {\n\t// \tcolor.rgb = vec3(1.0) - color.rgb;\n\t// }\n\n\tif(color.r >= 0.9 && color.g < 0.01) {\n\t\tif(colorMap.r > .5) {\n\t\t\tcolor.rgb = vec3(1.0);\n\t\t} else {\n\t\t\tcolor.rgb = vec3(0.1);\n\t\t}\n\t}\n\n\n\tfloat br = length(color.rgb) / length(vec3(1.0));\n\tcolor.rgb = mix(color0, color1, br);\n\n\tvec3 invert = vec3(1.0) - color.rgb;\n\n\tcolor.rgb = mix(color.rgb, invert, offset);\n\n    gl_FragColor = color;\n}"
 
 /***/ },
-/* 125 */
+/* 123 */
 /***/ function(module, exports) {
 
 	module.exports = "precision highp float;\n#define GLSLIFY 1\nvarying vec4 vColor;\n\nvoid main(void) {\n\tif(distance(gl_PointCoord, vec2(.5)) > .5) discard;\n    gl_FragColor = vColor;\n}"
 
 /***/ },
-/* 126 */
+/* 124 */
 /***/ function(module, exports) {
 
 	module.exports = "// render.vert\n\nprecision highp float;\n#define GLSLIFY 1\nattribute vec3 aVertexPosition;\nattribute vec3 aNormal;\n\nuniform mat4 uModelMatrix;\nuniform mat4 uViewMatrix;\nuniform mat4 uProjectionMatrix;\nuniform sampler2D textureCurr;\nuniform sampler2D textureNext;\nuniform sampler2D textureExtra;\nuniform float percent;\nuniform float time;\nuniform vec2 uViewport;\nuniform float uEnd;\nuniform float uLength;\nuniform float uNumSeg;\n\nvarying vec4 vColor;\nvarying vec3 vNormal;\n\nconst float radius = 0.015;\n\nvoid main(void) {\n\tvec2 uv      = aVertexPosition.xy;\n\tvec3 posCurr = texture2D(textureCurr, uv).rgb;\n\tvec3 posNext = texture2D(textureNext, uv).rgb;\n\tvec3 pos     = mix(posCurr, posNext, percent);\n\tvec3 extra   = texture2D(textureExtra, uv).rgb;\n\tgl_Position  = uProjectionMatrix * uViewMatrix * uModelMatrix * vec4(pos, 1.0);\n\n\tfloat a \t = 1.0;\n\tif(extra.b > uEnd + uLength) {\n\t\ta = 0.0;\n\t} else if(extra.b > uEnd ) {\n\t\ta = smoothstep(uEnd + uLength, uEnd, extra.b);\n\t}\n\n\tif(extra.b < uNumSeg) {\n\t\ta = smoothstep(0.0, uNumSeg, extra.b);\n\t}\n\n\tif(length(posNext) < length(posCurr)) {\n\t\ta = 0.0;\n\t}\n\n\ta = pow(a, 3.0);\n\t\n\tvColor       = vec4(vec3(1.0, 0.0, 0.0), a);\n\n\tfloat distOffset = uViewport.y * uProjectionMatrix[1][1] * radius / gl_Position.w;\n    gl_PointSize = distOffset * (1.0 + extra.x * 1.0);\n\n\tvNormal \t = aNormal;\n}"
 
 /***/ },
-/* 127 */
+/* 125 */
 /***/ function(module, exports) {
 
 	module.exports = "// save.frag\n\n#extension GL_EXT_draw_buffers : require \nprecision highp float;\n#define GLSLIFY 1\n\nvarying vec3 vColor;\nvarying vec3 vExtra;\n\nvoid main(void) {\n    gl_FragData[0] = vec4(vColor, 1.0);\n    gl_FragData[1] = vec4(0.0, 0.0, 0.0, 1.0);\n    gl_FragData[2] = vec4(vExtra, 1.0);\n    gl_FragData[3] = vec4(vColor, 1.0);\n}"
 
 /***/ },
-/* 128 */
+/* 126 */
 /***/ function(module, exports) {
 
 	module.exports = "// save.vert\n\nprecision highp float;\n#define GLSLIFY 1\nattribute vec3 aVertexPosition;\nattribute vec2 aTextureCoord;\nattribute vec3 aNormal;\nattribute vec3 aExtra;\n\nuniform mat4 uModelMatrix;\nuniform mat4 uViewMatrix;\nuniform mat4 uProjectionMatrix;\n\nvarying vec2 vTextureCoord;\nvarying vec3 vColor;\nvarying vec3 vNormal;\nvarying vec3 vExtra;\n\nvoid main(void) {\n\tvColor       = aVertexPosition;\n\tvec3 pos     = vec3(aTextureCoord, 0.0);\n\tgl_Position  = uProjectionMatrix * uViewMatrix * uModelMatrix * vec4(pos, 1.0);\n\t\n\tgl_PointSize = 1.0;\n\t\n\tvNormal      = aNormal;\n\tvExtra       = aExtra;\n}"
 
 /***/ },
-/* 129 */
+/* 127 */
 /***/ function(module, exports) {
 
 	module.exports = "// sim.frag\n\n#extension GL_EXT_draw_buffers : require \nprecision highp float;\n#define GLSLIFY 1\n\nvarying vec2 vTextureCoord;\nuniform sampler2D textureVel;\nuniform sampler2D texturePos;\nuniform sampler2D textureExtra;\nuniform sampler2D textureOrgPos;\nuniform float time;\nuniform float uSphereSize;\nuniform float uEnd;\nuniform float uNumSeg;\nuniform float uLength;\nuniform vec3 uHit;\n\nvec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0;  }\n\nvec4 mod289(vec4 x) { return x - floor(x * (1.0 / 289.0)) * 289.0;  }\n\nvec4 permute(vec4 x) {  return mod289(((x*34.0)+1.0)*x);  }\n\nvec4 taylorInvSqrt(vec4 r) {  return 1.79284291400159 - 0.85373472095314 * r;}\n\nfloat snoise(vec3 v) { \n\tconst vec2  C = vec2(1.0/6.0, 1.0/3.0) ;\n\tconst vec4  D = vec4(0.0, 0.5, 1.0, 2.0);\n\n\tvec3 i  = floor(v + dot(v, C.yyy) );\n\tvec3 x0 =   v - i + dot(i, C.xxx) ;\n\n\tvec3 g = step(x0.yzx, x0.xyz);\n\tvec3 l = 1.0 - g;\n\tvec3 i1 = min( g.xyz, l.zxy );\n\tvec3 i2 = max( g.xyz, l.zxy );\n\n\tvec3 x1 = x0 - i1 + C.xxx;\n\tvec3 x2 = x0 - i2 + C.yyy; // 2.0*C.x = 1/3 = C.y\n\tvec3 x3 = x0 - D.yyy;      // -1.0+3.0*C.x = -0.5 = -D.y\n\n\ti = mod289(i); \n\tvec4 p = permute( permute( permute( \n\t\t\t\t\t\t i.z + vec4(0.0, i1.z, i2.z, 1.0 ))\n\t\t\t\t\t + i.y + vec4(0.0, i1.y, i2.y, 1.0 )) \n\t\t\t\t\t + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));\n\n\tfloat n_ = 0.142857142857; // 1.0/7.0\n\tvec3  ns = n_ * D.wyz - D.xzx;\n\n\tvec4 j = p - 49.0 * floor(p * ns.z * ns.z);  //  mod(p,7*7)\n\n\tvec4 x_ = floor(j * ns.z);\n\tvec4 y_ = floor(j - 7.0 * x_ );    // mod(j,N)\n\n\tvec4 x = x_ *ns.x + ns.yyyy;\n\tvec4 y = y_ *ns.x + ns.yyyy;\n\tvec4 h = 1.0 - abs(x) - abs(y);\n\n\tvec4 b0 = vec4( x.xy, y.xy );\n\tvec4 b1 = vec4( x.zw, y.zw );\n\n\tvec4 s0 = floor(b0)*2.0 + 1.0;\n\tvec4 s1 = floor(b1)*2.0 + 1.0;\n\tvec4 sh = -step(h, vec4(0.0));\n\n\tvec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;\n\tvec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;\n\n\tvec3 p0 = vec3(a0.xy,h.x);\n\tvec3 p1 = vec3(a0.zw,h.y);\n\tvec3 p2 = vec3(a1.xy,h.z);\n\tvec3 p3 = vec3(a1.zw,h.w);\n\n\tvec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));\n\tp0 *= norm.x;\n\tp1 *= norm.y;\n\tp2 *= norm.z;\n\tp3 *= norm.w;\n\n\tvec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);\n\tm = m * m;\n\treturn 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1), \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tdot(p2,x2), dot(p3,x3) ) );\n}\n\nvec3 snoiseVec3( vec3 x ){\n\n\tfloat s  = snoise(vec3( x ));\n\tfloat s1 = snoise(vec3( x.y - 19.1 , x.z + 33.4 , x.x + 47.2 ));\n\tfloat s2 = snoise(vec3( x.z + 74.2 , x.x - 124.5 , x.y + 99.4 ));\n\tvec3 c = vec3( s , s1 , s2 );\n\treturn c;\n\n}\n\n\nvec3 curlNoise( vec3 p ){\n\t\n\tconst float e = .1;\n\tvec3 dx = vec3( e   , 0.0 , 0.0 );\n\tvec3 dy = vec3( 0.0 , e   , 0.0 );\n\tvec3 dz = vec3( 0.0 , 0.0 , e   );\n\n\tvec3 p_x0 = snoiseVec3( p - dx );\n\tvec3 p_x1 = snoiseVec3( p + dx );\n\tvec3 p_y0 = snoiseVec3( p - dy );\n\tvec3 p_y1 = snoiseVec3( p + dy );\n\tvec3 p_z0 = snoiseVec3( p - dz );\n\tvec3 p_z1 = snoiseVec3( p + dz );\n\n\tfloat x = p_y1.z - p_y0.z - p_z1.y + p_z0.y;\n\tfloat y = p_z1.x - p_z0.x - p_x1.z + p_x0.z;\n\tfloat z = p_x1.y - p_x0.y - p_y1.x + p_y0.x;\n\n\tconst float divisor = 1.0 / ( 2.0 * e );\n\treturn normalize( vec3( x , y , z ) * divisor );\n\n}\n\n\nmat4 rotationMatrix(vec3 axis, float angle) {\n    axis = normalize(axis);\n    float s = sin(angle);\n    float c = cos(angle);\n    float oc = 1.0 - c;\n    \n    return mat4(oc * axis.x * axis.x + c,           oc * axis.x * axis.y - axis.z * s,  oc * axis.z * axis.x + axis.y * s,  0.0,\n                oc * axis.x * axis.y + axis.z * s,  oc * axis.y * axis.y + c,           oc * axis.y * axis.z - axis.x * s,  0.0,\n                oc * axis.z * axis.x - axis.y * s,  oc * axis.y * axis.z + axis.x * s,  oc * axis.z * axis.z + c,           0.0,\n                0.0,                                0.0,                                0.0,                                1.0);\n}\n\nvec3 rotate(vec3 v, vec3 axis, float angle) {\n\tmat4 m = rotationMatrix(axis, angle);\n\treturn (m * vec4(v, 1.0)).xyz;\n}\n\nvec3 power(vec3 v, float t) {\n\treturn vec3(\n\t\t\tpow(v.x, t),\n\t\t\tpow(v.y, t),\n\t\t\tpow(v.z, t)\n\t\t);\n}\n\nvoid main(void) {\n\tvec3 pos        = texture2D(texturePos, vTextureCoord).rgb;\n\tvec3 vel        = texture2D(textureVel, vTextureCoord).rgb;\n\tvec3 extra      = texture2D(textureExtra, vTextureCoord).rgb;\n\tvec3 orgPos     = texture2D(textureOrgPos, vTextureCoord).rgb;\n\tfloat posOffset = mix(extra.r, 1.0, .925) * 0.2;\n\tvec3 acc        = curlNoise(pos * posOffset + time * .35);\n\t// acc \t\t\t= power(acc, 5.0);\n\n\t// float speed = mix(extra.g, 1.0, .95);\n\tfloat speed = 0.8 + extra.g * 0.5;\n\tspeed = pow(speed, 2.0) * (1.5 + acc.r);\n\n\tif(extra.b < uNumSeg) {\n\t\tspeed *= 0.001;\n\t}\n\t\n\tvel += acc * .001 * speed;\n\tvec3 dir = normalize(pos);\n\tvel += dir * 0.002 * speed;\n\n\n\tfloat distToHit = distance(pos, uHit);\n\tconst float minDist = 1.5;\n\tif(distToHit < minDist) {\n\t\tvec3 dirToHit = normalize(uHit - pos);\n\t\tfloat f = (minDist - distToHit) * 0.02;\n\t\tvel += dirToHit * f;\n\t}\n\n\n\tconst float decrease = .93;\n\tvel *= decrease;\n\n\textra.b += 1.0;\n\tpos += vel;\n\n\tif(extra.b > uEnd + uLength) {\n\t\tvec3 axis = normalize(extra);\n\t\torgPos = rotate(orgPos, axis, time * extra.r * extra.g);\n\t\tpos = orgPos;\n\t\textra.b = 0.0;\n\t}\n\n\tgl_FragData[0] = vec4(pos, 1.0);\n\tgl_FragData[1] = vec4(vel, 1.0);\n\tgl_FragData[2] = vec4(extra, 1.0);\n\tgl_FragData[3] = vec4(orgPos, 1.0);\n}"
 
 /***/ },
-/* 130 */
+/* 128 */
 /***/ function(module, exports) {
 
 	// stats.js - http://github.com/mrdoob/stats.js
@@ -8942,284 +8873,6 @@
 	Stats.Panel=function(h,k,l){var c=Infinity,g=0,e=Math.round,a=e(window.devicePixelRatio||1),r=80*a,f=48*a,t=3*a,u=2*a,d=3*a,m=15*a,n=74*a,p=30*a,q=document.createElement("canvas");q.width=r;q.height=f;q.style.cssText="width:80px;height:48px";var b=q.getContext("2d");b.font="bold "+9*a+"px Helvetica,Arial,sans-serif";b.textBaseline="top";b.fillStyle=l;b.fillRect(0,0,r,f);b.fillStyle=k;b.fillText(h,t,u);b.fillRect(d,m,n,p);b.fillStyle=l;b.globalAlpha=.9;b.fillRect(d,m,n,p);return{dom:q,update:function(f,
 	v){c=Math.min(c,f);g=Math.max(g,f);b.fillStyle=l;b.globalAlpha=1;b.fillRect(0,0,r,m);b.fillStyle=k;b.fillText(e(f)+" "+h+" ("+e(c)+"-"+e(g)+")",t,u);b.drawImage(q,d+a,m,n-a,p,d,m,n-a,p);b.fillRect(d+n-a,m,a,p);b.fillStyle=l;b.globalAlpha=.9;b.fillRect(d+n-a,m,a,e((1-f/v)*p))}}};"object"===typeof module&&(module.exports=Stats);
 
-
-/***/ },
-/* 131 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	var stylesInDom = {},
-		memoize = function(fn) {
-			var memo;
-			return function () {
-				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-				return memo;
-			};
-		},
-		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
-		}),
-		getHeadElement = memoize(function () {
-			return document.head || document.getElementsByTagName("head")[0];
-		}),
-		singletonElement = null,
-		singletonCounter = 0,
-		styleElementsInsertedAtTop = [];
-
-	module.exports = function(list, options) {
-		if(false) {
-			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-		}
-
-		options = options || {};
-		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-		// tags it will allow on a page
-		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-
-		// By default, add <style> tags to the bottom of <head>.
-		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
-
-		var styles = listToStyles(list);
-		addStylesToDom(styles, options);
-
-		return function update(newList) {
-			var mayRemove = [];
-			for(var i = 0; i < styles.length; i++) {
-				var item = styles[i];
-				var domStyle = stylesInDom[item.id];
-				domStyle.refs--;
-				mayRemove.push(domStyle);
-			}
-			if(newList) {
-				var newStyles = listToStyles(newList);
-				addStylesToDom(newStyles, options);
-			}
-			for(var i = 0; i < mayRemove.length; i++) {
-				var domStyle = mayRemove[i];
-				if(domStyle.refs === 0) {
-					for(var j = 0; j < domStyle.parts.length; j++)
-						domStyle.parts[j]();
-					delete stylesInDom[domStyle.id];
-				}
-			}
-		};
-	}
-
-	function addStylesToDom(styles, options) {
-		for(var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-			if(domStyle) {
-				domStyle.refs++;
-				for(var j = 0; j < domStyle.parts.length; j++) {
-					domStyle.parts[j](item.parts[j]);
-				}
-				for(; j < item.parts.length; j++) {
-					domStyle.parts.push(addStyle(item.parts[j], options));
-				}
-			} else {
-				var parts = [];
-				for(var j = 0; j < item.parts.length; j++) {
-					parts.push(addStyle(item.parts[j], options));
-				}
-				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-			}
-		}
-	}
-
-	function listToStyles(list) {
-		var styles = [];
-		var newStyles = {};
-		for(var i = 0; i < list.length; i++) {
-			var item = list[i];
-			var id = item[0];
-			var css = item[1];
-			var media = item[2];
-			var sourceMap = item[3];
-			var part = {css: css, media: media, sourceMap: sourceMap};
-			if(!newStyles[id])
-				styles.push(newStyles[id] = {id: id, parts: [part]});
-			else
-				newStyles[id].parts.push(part);
-		}
-		return styles;
-	}
-
-	function insertStyleElement(options, styleElement) {
-		var head = getHeadElement();
-		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
-		if (options.insertAt === "top") {
-			if(!lastStyleElementInsertedAtTop) {
-				head.insertBefore(styleElement, head.firstChild);
-			} else if(lastStyleElementInsertedAtTop.nextSibling) {
-				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
-			} else {
-				head.appendChild(styleElement);
-			}
-			styleElementsInsertedAtTop.push(styleElement);
-		} else if (options.insertAt === "bottom") {
-			head.appendChild(styleElement);
-		} else {
-			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
-		}
-	}
-
-	function removeStyleElement(styleElement) {
-		styleElement.parentNode.removeChild(styleElement);
-		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
-		if(idx >= 0) {
-			styleElementsInsertedAtTop.splice(idx, 1);
-		}
-	}
-
-	function createStyleElement(options) {
-		var styleElement = document.createElement("style");
-		styleElement.type = "text/css";
-		insertStyleElement(options, styleElement);
-		return styleElement;
-	}
-
-	function createLinkElement(options) {
-		var linkElement = document.createElement("link");
-		linkElement.rel = "stylesheet";
-		insertStyleElement(options, linkElement);
-		return linkElement;
-	}
-
-	function addStyle(obj, options) {
-		var styleElement, update, remove;
-
-		if (options.singleton) {
-			var styleIndex = singletonCounter++;
-			styleElement = singletonElement || (singletonElement = createStyleElement(options));
-			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
-			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
-		} else if(obj.sourceMap &&
-			typeof URL === "function" &&
-			typeof URL.createObjectURL === "function" &&
-			typeof URL.revokeObjectURL === "function" &&
-			typeof Blob === "function" &&
-			typeof btoa === "function") {
-			styleElement = createLinkElement(options);
-			update = updateLink.bind(null, styleElement);
-			remove = function() {
-				removeStyleElement(styleElement);
-				if(styleElement.href)
-					URL.revokeObjectURL(styleElement.href);
-			};
-		} else {
-			styleElement = createStyleElement(options);
-			update = applyToTag.bind(null, styleElement);
-			remove = function() {
-				removeStyleElement(styleElement);
-			};
-		}
-
-		update(obj);
-
-		return function updateStyle(newObj) {
-			if(newObj) {
-				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
-					return;
-				update(obj = newObj);
-			} else {
-				remove();
-			}
-		};
-	}
-
-	var replaceText = (function () {
-		var textStore = [];
-
-		return function (index, replacement) {
-			textStore[index] = replacement;
-			return textStore.filter(Boolean).join('\n');
-		};
-	})();
-
-	function applyToSingletonTag(styleElement, index, remove, obj) {
-		var css = remove ? "" : obj.css;
-
-		if (styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = replaceText(index, css);
-		} else {
-			var cssNode = document.createTextNode(css);
-			var childNodes = styleElement.childNodes;
-			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
-			if (childNodes.length) {
-				styleElement.insertBefore(cssNode, childNodes[index]);
-			} else {
-				styleElement.appendChild(cssNode);
-			}
-		}
-	}
-
-	function applyToTag(styleElement, obj) {
-		var css = obj.css;
-		var media = obj.media;
-
-		if(media) {
-			styleElement.setAttribute("media", media)
-		}
-
-		if(styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = css;
-		} else {
-			while(styleElement.firstChild) {
-				styleElement.removeChild(styleElement.firstChild);
-			}
-			styleElement.appendChild(document.createTextNode(css));
-		}
-	}
-
-	function updateLink(linkElement, obj) {
-		var css = obj.css;
-		var sourceMap = obj.sourceMap;
-
-		if(sourceMap) {
-			// http://stackoverflow.com/a/26603875
-			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-		}
-
-		var blob = new Blob([css], { type: "text/css" });
-
-		var oldSrc = linkElement.href;
-
-		linkElement.href = URL.createObjectURL(blob);
-
-		if(oldSrc)
-			URL.revokeObjectURL(oldSrc);
-	}
-
-
-/***/ },
-/* 132 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(110);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(131)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/autoprefixer-loader/index.js?browsers=last 3 version!../../node_modules/sass-loader/index.js?includePaths[]=dist!./global.scss", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/autoprefixer-loader/index.js?browsers=last 3 version!../../node_modules/sass-loader/index.js?includePaths[]=dist!./global.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
 
 /***/ }
 /******/ ]);
