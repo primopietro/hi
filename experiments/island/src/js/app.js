@@ -1,4 +1,4 @@
-import '../scss/global.scss';
+
 import alfrid, { GL } from 'alfrid';
 import SceneApp from './SceneApp';
 import AssetsLoader from 'assets-loader';
